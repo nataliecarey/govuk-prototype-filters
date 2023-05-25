@@ -10,7 +10,7 @@ Convert a Markdown formatted string to HTML decorated with [typography classes f
 Input
 
 ```njk
-{{ "Visit [GOV.UK](https://gov.uk)." | govukMarkdown | safe }}
+{{ "Visit [GOV.UK](https://gov.uk)." | xgovuk.govukMarkdown | safe }}
 ```
 
 Output
@@ -35,7 +35,7 @@ Input
 #### Heading level 4
 {% endset %}
 
-{{ headings | govukMarkdown | safe }}
+{{ headings | xgovuk.govukMarkdown | safe }}
 ```
 
 Output
@@ -52,7 +52,7 @@ The [GOV.UK Design System recommends](https://design-system.service.gov.uk/style
 Input
 
 ```njk
-{{ headings | govukMarkdown(headingsStartWith="l") | safe }}
+{{ headings | xgovuk.govukMarkdown(headingsStartWith="l") | safe }}
 ```
 
 Output
@@ -71,8 +71,8 @@ Checks if a value is classified as a [`String`](https://developer.mozilla.org/en
 Input
 
 ```njk
-{{ "Number 10" | isString }}
-{{ 10 | isString }}
+{{ "Number 10" | xgovuk.isString }}
+{{ 10 | xgovuk.isString }}
 ```
 
 Output
@@ -89,7 +89,7 @@ Add a non-breaking space between the last two words of a string. This prevents a
 Input
 
 ```njk
-{{ "Department for Business, Energy & Industrial Strategy" | noOrphans | safe }}
+{{ "Department for Business, Energy & Industrial Strategy" | xgovuk.noOrphans | safe }}
 ```
 
 Output
@@ -105,7 +105,7 @@ Convert a string to kebab-case. This can be useful to slugify titles for use in 
 Input
 
 ```njk
-{{ "Department for Education" | slugify }}
+{{ "Department for Education" | xgovuk.slugify }}
 ```
 
 Output
@@ -121,7 +121,7 @@ Checks if a string starts with a value.
 Input
 
 ```njk
-{{ "Department for Transport" | startsWith("Department") }}
+{{ "Department for Transport" | xgovuk.startsWith("Department") }}
 ```
 
 Output

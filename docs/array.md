@@ -10,7 +10,7 @@ Convert array to a list formatted as a sentence.
 Input
 
 ```njk
-{{ ["England", "Scotland", "Wales"] | formatList }}
+{{ ["England", "Scotland", "Wales"] | xgovuk.formatList }}
 ```
 
 Output
@@ -24,7 +24,7 @@ To format the list using a disjunction:
 Input
 
 ```njk
-{{ ["England", "Scotland", "Wales"] | formatList("disjunction") }}
+{{ ["England", "Scotland", "Wales"] | xgovuk.formatList("disjunction") }}
 ```
 
 Output
@@ -40,8 +40,8 @@ Checks if a value is classified as an [`Array`](https://developer.mozilla.org/en
 Input
 
 ```njk
-{{ ["england", "scotland", "wales"] | isArray }}
-{{ "great britain" | isArray }}
+{{ ["england", "scotland", "wales"] | xgovuk.isArray }}
+{{ "great britain" | xgovuk.isArray }}
 ```
 
 Output
@@ -64,7 +64,7 @@ Input
 }, {
   name: "David Jones",
   role: "user"
-}] | rejectFromArray("role", "admin") | dump }}
+}] | xgovuk.rejectFromArray("role", "admin") | dump }}
 ```
 
 Output
@@ -89,7 +89,7 @@ Input
 }, {
   name: "David Jones",
   role: "user"
-}] | selectFromArray("role", "admin") | dump }}
+}] | xgovuk.selectFromArray("role", "admin") | dump }}
 ```
 
 Output
@@ -109,7 +109,7 @@ Returns an array that contains only unique items.
 Input
 
 ```njk
-{{ ['Orange', 'Banana', 'Apple', 'Orange'] | uniqueFromArray }}
+{{ ['Orange', 'Banana', 'Apple', 'Orange'] | xgovuk.uniqueFromArray }}
 ```
 
 Output

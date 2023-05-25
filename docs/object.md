@@ -10,9 +10,9 @@ Checks if a value is the language type of [`Object`](https://developer.mozilla.o
 Input
 
 ```njk
-{{ { country: "england" } | isObject }}
-{{ ["england", "scotland", "wales"] | isObject }}
-{{ "great britain" | isObject }}
+{{ { country: "england" } | xgovuk.isObject }}
+{{ ["england", "scotland", "wales"] | xgovuk.isObject }}
+{{ "great britain" | xgovuk.isObject }}
 ```
 
 Output
@@ -34,7 +34,7 @@ Input
   "a": { name: "Sir Robert Walpole" },
   "b": { name: "Spencer Compton" },
   "c": { name: "Henry Pelham" }
-} | objectToArray | dump }}
+} | xgovuk.objectToArray | dump }}
 ```
 
 Output
