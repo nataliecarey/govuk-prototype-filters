@@ -13,7 +13,7 @@ Convert an array into a string formatted as a sentence.
 **Input**
 
 ```njk
-{{ ["England", "Scotland", "Wales"] | formatList }}
+{{ ["England", "Scotland", "Wales"] | xgovuk.formatList }}
 ```
 
 **Output**
@@ -27,7 +27,7 @@ To format the list using a disjunction:
 **Input**
 
 ```njk
-{{ ["England", "Scotland", "Wales"] | formatList("disjunction") }}
+{{ ["England", "Scotland", "Wales"] | xgovuk.formatList("disjunction") }}
 ```
 
 **Output**
@@ -45,8 +45,8 @@ Check a value is classified as an [`Array`](https://developer.mozilla.org/en-US/
 **Input**
 
 ```njk
-{{ ["england", "scotland", "wales"] | isArray }}
-{{ "great britain" | isArray }}
+{{ ["england", "scotland", "wales"] | xgovuk.isArray }}
+{{ "great britain" | xgovuk.isArray }}
 ```
 
 **Output**
@@ -71,7 +71,7 @@ Reject items in an array that have a key with a given value.
 }, {
   name: "David Jones",
   role: "user"
-}] | rejectFromArray("role", "admin") | dump }}
+}] | xgovuk.rejectFromArray("role", "admin") | dump }}
 ```
 
 **Output**
@@ -98,7 +98,7 @@ Select items in an array that have a key with a given value.
 }, {
   name: "David Jones",
   role: "user"
-}] | selectFromArray("role", "admin") | dump }}
+}] | xgovuk.selectFromArray("role", "admin") | dump }}
 ```
 
 **Output**
@@ -119,7 +119,7 @@ Return unique items from an array.
 **Input**
 
 ```njk
-{{ ['Orange', 'Banana', 'Apple', 'Orange'] | uniqueFromArray }}
+{{ ['Orange', 'Banana', 'Apple', 'Orange'] | xgovuk.uniqueFromArray }}
 ```
 
 **Output**

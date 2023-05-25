@@ -13,7 +13,7 @@ Return a date a certain number of days from another date.
 **Input**
 
 ```njk
-{{ "2023-05-11" | duration(5) }}
+{{ "2023-05-11" | xgovuk.duration(5) }}
 ```
 
 **Output**
@@ -27,9 +27,9 @@ A second parameter can be used to change the unit used to increment the date by.
 **Input**
 
 ```njk
-{{ "2023-05-11" | duration(5, "weeks") }}
-{{ "2023-05-11" | duration(5, "months") }}
-{{ "2023-05-11" | duration(5, "years") }}
+{{ "2023-05-11" | xgovuk.duration(5, "weeks") }}
+{{ "2023-05-11" | xgovuk.duration(5, "months") }}
+{{ "2023-05-11" | xgovuk.duration(5, "years") }}
 ```
 
 **Output**
@@ -46,7 +46,7 @@ To return a date from today’s date, pass the special word `"today"` (or `"now"
 
 ```njk
 {# Current datetime is 2023-05-06T09:00:59 #}
-{{ "today" | duration(5) }}
+{{ "today" | xgovuk.duration(5) }}
 ```
 
 **Output**
@@ -64,7 +64,7 @@ Convert an ISO 8601 date time into a human readable date that follows [the GOV.U
 **Input**
 
 ```njk
-{{ "2021-08-17" | govukDate }}
+{{ "2021-08-17" | xgovuk.govukDate }}
 ```
 
 **Output**
@@ -78,7 +78,7 @@ You can also output a date with a truncated month:
 **Input**
 
 ```njk
-{{ "2021-08-17" | govukDate("truncate") }}
+{{ "2021-08-17" | xgovuk.govukDate("truncate") }}
 ```
 
 **Output**
@@ -92,7 +92,7 @@ To get the today’s date, pass the special word `"today"` (or `"now"`):
 **Input**
 
 ```njk
-This page was last updated on {{ "today" | govukDate }}.
+This page was last updated on {{ "today" | xgovuk.govukDate }}.
 ```
 
 **Output**
@@ -110,9 +110,9 @@ Format an ISO 8601 date time or time to a human readable time that follows [the 
 **Input**
 
 ```njk
-{{ "2021-08-17T00:00:31" | govukTime }}
-{{ "2021-08-17T12:00:59" | govukTime }}
-{{ "2021-08-17T18:30:00" | govukTime }}
+{{ "2021-08-17T00:00:31" | xgovuk.govukTime }}
+{{ "2021-08-17T12:00:59" | xgovuk.govukTime }}
+{{ "2021-08-17T18:30:00" | xgovuk.govukTime }}
 ```
 
 **Output**
@@ -128,7 +128,7 @@ You can also pass in a time:
 **Input**
 
 ```njk
-{{ "08:15" | govukTime }}
+{{ "08:15" | xgovuk.govukTime }}
 ```
 
 **Output**
@@ -142,7 +142,7 @@ To get the current time, pass the special word `"now"` (or `"today"`):
 **Input**
 
 ```njk
-You submitted your application at {{ "now" | govukTime }}.
+You submitted your application at {{ "now" | xgovuk.govukTime }}.
 ```
 
 **Output**
@@ -170,7 +170,7 @@ const data = {
 ```
 
 ```njk
-{{ data | isoDateFromDateInput("dob") }}
+{{ data | xgovuk.isoDateFromDateInput("dob") }}
 ```
 
 **Output**
@@ -179,12 +179,12 @@ const data = {
 2012-02-01
 ```
 
-Combine this filter with `govukDate` to output a human readable date:
+Combine this filter with `xgovuk.govukDate` to output a human readable date:
 
 **Input**
 
 ```njk
-{{ data | isoDateFromDateInput("dob") | govukDate }}
+{{ data | isoDateFromDateInput("dob") | xgovuk.govukDate }}
 ```
 
 **Output**
@@ -207,7 +207,7 @@ const data = {
 ```
 
 ```njk
-{{ data.passport | isoDateFromDateInput }}
+{{ data.passport | xgovuk.isoDateFromDateInput }}
 ```
 
 **Output**
@@ -225,7 +225,7 @@ Convert a number (between 1 and 12) into the name of the corresponding month.
 **Input**
 
 ```njk
-{{ 3 | monthName }}
+{{ 3 | xgovuk.monthName }}
 ```
 
 **Output**
@@ -239,7 +239,7 @@ You can also output a truncated month name:
 **Input**
 
 ```njk
-{{ 3 | monthName("truncate") }}
+{{ 3 | xgovuk.monthName("truncate") }}
 ```
 
 **Output**

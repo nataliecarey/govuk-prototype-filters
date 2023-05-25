@@ -13,9 +13,9 @@ Convert a number into a string formatted as currency.
 **Input**
 
 ```njk
-{{ 133.66667 | currency }}
-{{ 75.5 | currency }}
-{{ 75 | currency }}
+{{ 133.66667 | xgovuk.currency }}
+{{ 75.5 | xgovuk.currency }}
+{{ 75 | xgovuk.currency }}
 ```
 
 **Output**
@@ -40,10 +40,10 @@ Default is `"symbol"`.
 **Input**
 
 ```njk
-{{ 75 | currency(display="narrowSymbol", unit="USD") }}
-{{ 75 | currency(display="symbol", unit="USD") }}
-{{ 75 | currency(display="code", unit="USD") }}
-{{ 75 | currency(display="name", unit="USD") }}
+{{ 75 | xgovuk.currency(display="narrowSymbol", unit="USD") }}
+{{ 75 | xgovuk.currency(display="symbol", unit="USD") }}
+{{ 75 | xgovuk.currency(display="code", unit="USD") }}
+{{ 75 | xgovuk.currency(display="name", unit="USD") }}
 ```
 
 **Output**
@@ -64,7 +64,7 @@ Use the `trailingZeros` option to show leading zeros for whole number values. De
 **Input**
 
 ```njk
-{{ 75.0015 | currency(trailingZeros=false) }}
+{{ 75.0015 | xgovuk.currency(trailingZeros=false) }}
 ```
 
 **Output**
@@ -80,7 +80,7 @@ Use the `unit` option to change the unit of currency. Accepts an [ISO 4217 curre
 **Input**
 
 ```njk
-{{ 75 | currency(unit="USD") }}
+{{ 75 | xgovuk.currency(unit="USD") }}
 ```
 
 **Output**
@@ -98,8 +98,8 @@ Check a value is classified as a [`Number`](https://developer.mozilla.org/en-US/
 **Input**
 
 ```njk
-{{ 1801 | isNumber }}
-{{ "1801" | isNumber }}
+{{ 1801 | xgovuk.isNumber }}
+{{ "1801" | xgovuk.isNumber }}
 ```
 
 **Output**
@@ -118,8 +118,8 @@ Convert a number into an ordinal numeral that follows [the GOV.UK style](https:/
 **Input**
 
 ```njk
-{{ 4 | ordinal }}
-{{ 22 | ordinal }}
+{{ 4 | xgovuk.ordinal }}
+{{ 22 | xgovuk.ordinal }}
 ```
 
 **Output**
@@ -140,8 +140,8 @@ Get the plural word form for an item for a given number.
 **Input**
 
 ```njk
-{{ 1 | plural("mouse") }}
-{{ 2 | plural("mouse") }}
+{{ 1 | xgovuk.plural("mouse") }}
+{{ 2 | xgovuk.plural("mouse") }}
 ```
 
 **Output**
@@ -158,8 +158,8 @@ Use the `showNumber` option to show number alongside the pluralised word. Defaul
 **Input**
 
 ```njk
-{{ 1 | plural("mouse", showNumber=false) }}
-{{ 2 | plural("mouse", showNumber=false) }}
+{{ 1 | xgovuk.plural("mouse", showNumber=false) }}
+{{ 2 | xgovuk.plural("mouse", showNumber=false) }}
 ```
 
 **Output**

@@ -12,7 +12,7 @@ startButton:
 content: |
   Filters are a feature of the Nunjucks templating language that allow you to modify variables. Separated by a pipe symbol (`|`), they can be chained together, with the output of one filter passed on to the next.
 
-  For example, `{{ "<p>GOV.UK</p>" | striptags | lower }}` will remove the HTML tags, lower-case the remaining string and output `gov.uk`.
+  For example, `{{ "<p>GOV.UK</p>" | xgovuk.striptags | xgovuk.lower }}` will remove the HTML tags, lower-case the remaining string and output `gov.uk`.
 
   GOV.UK Prototype Filters provides an additional collection of filters which can be used to transform:
 

@@ -13,7 +13,7 @@ Convert a Markdown formatted string into HTML decorated with [typography classes
 **Input**
 
 ```njk
-{{ "Visit [GOV.UK](https://gov.uk)." | govukMarkdown | safe }}
+{{ "Visit [GOV.UK](https://gov.uk)." | xgovuk.govukMarkdown | safe }}
 ```
 
 **Output**
@@ -36,7 +36,7 @@ By default, headings start using the class `govuk-heading-xl`.
 #### Heading level 4
 {% endset %}
 
-{{ headings | govukMarkdown | safe }}
+{{ headings | xgovuk.govukMarkdown | safe }}
 ```
 
 **Output**
@@ -55,7 +55,7 @@ Start headings using the smaller size by setting the `headingsStartWith` option:
 **Input**
 
 ```njk
-{{ headings | govukMarkdown(headingsStartWith="l") | safe }}
+{{ headings | xgovuk.govukMarkdown(headingsStartWith="l") | safe }}
 ```
 
 **Output**
@@ -76,8 +76,8 @@ Check a value is classified as a [`String`](https://developer.mozilla.org/en-US/
 **Input**
 
 ```njk
-{{ "Number 10" | isString }}
-{{ 10 | isString }}
+{{ "Number 10" | xgovuk.isString }}
+{{ 10 | xgovuk.isString }}
 ```
 
 **Output**
@@ -98,7 +98,7 @@ This prevents an orphaned word appearing by itself at the end of a paragraph. Th
 **Input**
 
 ```njk
-{{ "Department for Business, Energy & Industrial Strategy" | noOrphans | safe }}
+{{ "Department for Business, Energy & Industrial Strategy" | xgovuk.noOrphans | safe }}
 ```
 
 **Output**
@@ -118,7 +118,7 @@ This can be useful to slugify titles for use in URLs or fragment identifiers.
 **Input**
 
 ```njk
-{{ "Department for Education" | slugify }}
+{{ "Department for Education" | xgovuk.slugify }}
 ```
 
 **Output**
@@ -136,7 +136,7 @@ Check a string starts with a value.
 **Input**
 
 ```njk
-{{ "Department for Transport" | startsWith("Department") }}
+{{ "Department for Transport" | xgovuk.startsWith("Department") }}
 ```
 
 **Output**

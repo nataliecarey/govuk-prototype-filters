@@ -15,7 +15,7 @@ Check a value is the language type of [`Object`](https://developer.mozilla.org/e
 ```njk
 {{ { country: "england" } | isObject }}
 {{ ["england", "scotland", "wales"] | isObject }}
-{{ "great britain" | isObject }}
+{{ "great britain" | xgovuk.isObject }}
 ```
 
 **Output**
@@ -39,7 +39,7 @@ Convert an object into an array, using each object’s key as the value for `id`
   "a": { name: "Sir Robert Walpole" },
   "b": { name: "Spencer Compton" },
   "c": { name: "Henry Pelham" }
-} | objectToArray | dump }}
+} | xgovuk.objectToArray | dump }}
 ```
 
 **Output**
